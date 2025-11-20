@@ -13,11 +13,13 @@ namespace ConsoleApp1
             int difference = Subtract(a, b);
             int product = Multiply(a, b);
             double quotient = Divide(a, b);
+            double square = Power(a, 2);
 
             Console.WriteLine($"{a} + {b} = {sum}");
             Console.WriteLine($"{a} - {b} = {difference}");
             Console.WriteLine($"{a} * {b} = {product}");
             Console.WriteLine($"{a} / {b} = {quotient}");
+            Console.WriteLine($"{a} ^ 2 = {square}");
         }
 
         private static int Add(int x, int y) => x + y;
@@ -34,6 +36,11 @@ namespace ConsoleApp1
             }
 
             return (double)x / y;
+        }
+
+        private static double Power(int x, int exponent)
+        {
+            return Math.Pow(x, exponent);
         }
     }
 }
